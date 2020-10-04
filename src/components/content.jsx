@@ -3,7 +3,7 @@ import { Layout, Form, Input, Switch } from "antd";
 import shift from "../model/shift";
 import VigenereCipher from "../model/vigenere";
 import fairplay from "../model/playfair";
-import * as railfence from "../model/railfence";
+// import * as railfence from "../model/railfence";
 
 const { Content } = Layout;
 const { TextArea } = Input;
