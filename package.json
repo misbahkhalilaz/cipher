@@ -1,0 +1,39 @@
+{
+	"name": "cipher",
+	"version": "1.0.0",
+	"description": "ReactJS Ciphers (PlayFair, Rail fence, vegnere, substitution, Shift)",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "react-scripts start"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/misbahkhalilaz/cipher.git"
+	},
+	"author": "Misbah Khalil",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/misbahkhalilaz/cipher/issues"
+	},
+	"dependencies": {
+		"antd": "^4.6.6",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-redux": "^7.2.1",
+		"react-scripts": "^3.4.3",
+		"redux": "^4.0.5"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
