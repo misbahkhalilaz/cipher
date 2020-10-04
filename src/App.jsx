@@ -1,26 +1,16 @@
-import React from "react";
-import { Layout, Menu } from "antd";
+import React, { useState } from "react";
+import { Layout } from "antd";
+import AppSider from "./components/sider";
 import "antd/dist/antd.css";
-
-const { Sider, Content, Footer } = Layout;
+import AppContent from "./components/content";
 
 export default function App() {
+  const [cipher, setCipher] = useState("shift");
+
   return (
     <Layout style={{ height: "90vh" }}>
-      <Sider>
-        <h1 style={{ color: "white", margin: "12px" }}>Select Cipher</h1>
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-          <Menu.Item key="1">nav 1</Menu.Item>
-          <Menu.Item key="2">nav 2</Menu.Item>
-          <Menu.Item key="3">nav 3</Menu.Item>
-          <Menu.Item key="2">nav 2</Menu.Item>
-          <Menu.Item key="3">nav 3</Menu.Item>
-        </Menu>
-      </Sider>
-      <Layout>
-        <Content style={{ height: "60vh" }}>Content</Content>
-        <Footer style={{ height: "30vh" }}>Footer</Footer>
-      </Layout>
+      <AppSider setCipher={setCipher} />
+      <AppContent cipher={cipher} />
     </Layout>
   );
 }
