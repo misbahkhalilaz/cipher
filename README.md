@@ -1,2 +1,2 @@
 # cipher
-ReactJS Ciphers (PlayFair, Rail fence, vegnere, substitution, )
+ReactJS Ciphers (PlayFair, Rail fence, vegnere, substitution, Shift)
