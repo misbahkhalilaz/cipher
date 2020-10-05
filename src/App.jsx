@@ -5,12 +5,12 @@ import "antd/dist/antd.css";
 import AppContent from "./components/content";
 
 export default function App() {
-  const [cipher, setCipher] = useState("shift");
+	const [cipher, setCipher] = useState("shift");
 
-  return (
-    <Layout style={{ height: "90vh" }}>
-      <AppSider setCipher={setCipher} />
-      <AppContent cipher={cipher} />
-    </Layout>
-  );
+	return (
+		<Layout style={{ height: "100vh" }}>
+			<AppSider setCipher={setCipher} />
+			<AppContent cipher={cipher} />
+		</Layout>
+	);
 }

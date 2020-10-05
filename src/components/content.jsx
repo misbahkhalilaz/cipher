@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Layout, Form, Input, Switch } from "antd";
+import { Layout, Form, Input, Switch, Col } from "antd";
 import shift from "../model/shift";
 import VigenereCipher from "../model/vigenere";
 import fairplay from "../model/playfair";
-// import * as railfence from "../model/railfence";
+import * as railfence from "../model/railfence";
+import * as substitution from "../model/substitution";
 
 const { Content } = Layout;
 const { TextArea } = Input;
@@ -21,11 +22,15 @@ const callCiphers = (cipher, dec, text, key) =>
 		? dec
 			? fairplay.decrypt(key.toString(), text)
 			: fairplay.encrypt(key.toString(), text)
-		: // : cipher === "railfence"
-		  // ? dec
-		  //   ? railfence.decodeRailFenceCipher(text, key)
-		  //   : railfence.encodeRailFenceCipher(text, key)
-		  "";
+		: cipher === "railfence"
+		? dec
+			? railfence.decodeRailFenceCipher(text, parseInt(key))
+			: railfence.encodeRailFenceCipher(text, key)
+		: cipher === "substitution"
+		? dec
+			? substitution.decode(text)
+			: substitution.encode(text)
+		: "";
 
 export default function AppContent({ cipher }) {
 	const [dec, setDec] = useState(false);
@@ -88,6 +93,9 @@ export default function AppContent({ cipher }) {
 					/>
 				</Form.Item>
 			</Form>
+			<Col span={24} offset={18}>
+				<i>Developed by: Misbah Khalil</i>
+			</Col>
 		</Content>
 	);
 }
