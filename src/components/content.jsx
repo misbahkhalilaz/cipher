@@ -5,6 +5,7 @@ import VigenereCipher from "../model/vigenere";
 import fairplay from "../model/playfair";
 import * as railfence from "../model/railfence";
 import * as substitution from "../model/substitution";
+// import img from "./img.jpg";
 
 const { Content } = Layout;
 const { TextArea } = Input;
@@ -54,7 +55,7 @@ export default function AppContent({ cipher }) {
 		},
 	};
 	return (
-		<Content style={{ backgroundColor: "#c5d1d6" }}>
+		<Content style={{ backgroundColor: "#cbcdd1" }}>
 			<Form style={{ margin: "5vw" }} {...layout}>
 				<Form.Item label="Decryption:">
 					<Switch onChange={(e) => setDec(e)} />
